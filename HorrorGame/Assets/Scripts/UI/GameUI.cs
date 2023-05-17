@@ -9,6 +9,9 @@ public class GameUI : MonoBehaviour
     public GameObject failPanel;
     public InventoryUIController inventoryPanel;
 
+    public GameObject helloConversationPanel;
+    private GameObject _currentPanel = null;
+
     public GameObject[] mobileOnlyViews;
 
 
@@ -49,5 +52,25 @@ public class GameUI : MonoBehaviour
     public void ShowInventory(bool doShow)
     {
         inventoryPanel.gameObject.SetActive(doShow);
+    }
+
+
+    public void ShowConversation(string conversationName)
+    {
+        if(conversationName == "Hello")
+        {
+            _currentPanel = helloConversationPanel;
+            _currentPanel.SetActive(true);
+        }
+    }
+
+
+    public void CloseCurrentConversation()
+    {
+        if(_currentPanel != null && _currentPanel.activeSelf == true)
+        {
+            _currentPanel.SetActive(false);
+            _currentPanel = null;
+        }
     }
 }

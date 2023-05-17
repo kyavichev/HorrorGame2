@@ -9,7 +9,7 @@ public class GameManager : MonoBehaviour
     private static GameManager instance = null;
     public static GameManager GetInstance() { return instance; }
 
-    public enum GameState { Playing, Win, Fail, Inventory };
+    public enum GameState { Playing, Win, Fail, Inventory, Conversation };
     public GameState state { private set; get; }
 
     public GameUI gameUI;
@@ -71,5 +71,11 @@ public class GameManager : MonoBehaviour
             state = GameState.Playing;
             gameUI.ShowInventory(false);
         }
+    }
+
+
+    public void ShowConversation(string conversationName)
+    {
+        gameUI.ShowConversation(conversationName);
     }
 }
