@@ -6,6 +6,8 @@ public class Collector : MonoBehaviour
 {
     public List<Collectable> collectedCollectables;
 
+    public AudioSource onCollectAudioSource;
+
 
     void Awake()
     {
@@ -15,19 +17,28 @@ public class Collector : MonoBehaviour
 
     public void Collect(Collectable collectable)
     {
-        //MessageBoxUIController.GetInstance().ShowMessage(collectable.name);
+        MessageBoxUIController.GetInstance().ShowMessage(collectable.name);
 
         if(collectable.collectableType == Collectable.CollectableType.Consumable)
         {
-            // Increase jump boost
+            // Consume the item
+
+            // Delete the item
             collectable.gameObject.SetActive(false);
             Destroy(collectable.gameObject);
+
+            // Play audio FX
+            onCollectAudioSource.Play();
         }
         else if(collectable.collectableType == Collectable.CollectableType.Storable)
         {
+            // Hide the item and add it to the hero (both list and game object)
             collectedCollectables.Add(collectable);
             collectable.gameObject.transform.SetParent(transform);
             collectable.gameObject.SetActive(false);
+
+            // Play audio FX
+            onCollectAudioSource.Play();
         }
     }
 

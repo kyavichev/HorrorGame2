@@ -103,8 +103,6 @@ public class SimpleSlendermanAI : MonoBehaviour
             isDetected = false;
 
             state = State.TeleportAway;
-
-            
         }
         else
         {

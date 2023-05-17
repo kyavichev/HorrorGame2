@@ -172,7 +172,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &233210187
 PrefabInstance:
@@ -264,7 +264,7 @@ Transform:
   - {fileID: 1621645844}
   - {fileID: 1373190732}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 85.65, z: 0}
 --- !u!136 &328456206
 CapsuleCollider:
@@ -1132,7 +1132,7 @@ Transform:
   m_Children:
   - {fileID: 1501130079}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &1797064758
 BoxCollider:
