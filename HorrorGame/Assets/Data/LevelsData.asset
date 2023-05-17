@@ -13,7 +13,9 @@ MonoBehaviour:
   m_Name: LevelsData
   m_EditorClassIdentifier: 
   levels:
-  - name: LevelOne
+  - name: Level00-Tutorial
     difficulty: 1
-  - name: LevelTwo
+  - name: Level01-Easy
     difficulty: 2
+  - name: Level02-Hard
+    difficulty: 3
