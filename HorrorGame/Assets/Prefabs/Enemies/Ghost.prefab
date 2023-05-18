@@ -45,13 +45,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51fa3a65b160845cd8666fa856ce79d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  state: 0
   hoverHeight: 3.5
   observeDistance: 15
-  speed: 8
+  attackDistance: 10
+  speed: 4
   rotSpeed: 10
   terrainMask:
     serializedVersion: 2
     m_Bits: 256
+  attackSpeed: 10
+  hideDuration: 5
+  _hideTimer: 0
+  shakeDuration: 3
+  _shakeTimer: 0
+  shakeDistance: 0.1
+  delayBetweenShakes: 0
+  visualRoot: {fileID: 9185571116150930702}
   targetObject: {fileID: 0}
 --- !u!1 &9185571116150930702
 GameObject:

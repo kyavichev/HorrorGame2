@@ -22,4 +22,17 @@ public class Destructor : MonoBehaviour
     //        }
     //    }
     //}
+
+
+    private void OnTriggerEnter(Collider other)
+    {
+        Destructible destructible = other.gameObject.GetComponent<Destructible>();
+        if (destructible)
+        {
+            if (destructible.team != team)
+            {
+                destructible.TakeDamage(damagePoints);
+            }
+        }
+    }
 }
