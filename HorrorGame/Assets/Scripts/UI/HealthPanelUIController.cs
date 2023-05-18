@@ -39,7 +39,7 @@ public class HealthPanelUIController : MonoBehaviour
 
                 if(progressBar)
                 {
-                    progressBar.UpdateToIndex(newValue);
+                    progressBar.UpdateToIndex(newValue - 1);
                 }
 
                 lastShownHealth = newValue;
@@ -56,7 +56,7 @@ public class HealthPanelUIController : MonoBehaviour
 
                 if (progressBar)
                 {
-                    progressBar.UpdateToIndex(0);
+                    progressBar.UpdateToIndex(-1);
                 }
 
                 lastShownHealth = 0;
