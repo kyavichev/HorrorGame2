@@ -18,7 +18,7 @@ public class LoadoutController : MonoBehaviour
     {
         if(rightHandWeapon != null)
         {
-            Destroy(rightHandWeapon);
+            Destroy(rightHandWeapon.gameObject);
             rightHandWeapon = null;
             rightHandItem = null;
         }
@@ -37,7 +37,7 @@ public class LoadoutController : MonoBehaviour
     {
         if (leftHandWeapon != null)
         {
-            Destroy(leftHandWeapon);
+            Destroy(leftHandWeapon.gameObject);
             leftHandWeapon = null;
             leftHandItem = null;
         }
