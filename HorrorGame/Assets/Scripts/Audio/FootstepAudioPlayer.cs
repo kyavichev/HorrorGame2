@@ -8,10 +8,11 @@ public class FootstepAudioPlayer : MonoBehaviour
     public AudioSource audioSource;
 
     public float timer { protected set; get; }
+    public bool isPlayingFX { protected set; get; } = false;
 
     public float speedModifier = 1;
 
-    public IHasSpeed trackedMover;
+    public PlayerController playerController;
 
 
     // Start is called before the first frame update
@@ -23,16 +24,37 @@ public class FootstepAudioPlayer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //timer += Time.deltaTime * _entity.DesiredSpeed * speedModifier;
-        timer += Time.deltaTime * speedModifier;
-
-        if (timer >= 1f)
+        if (playerController != null && Mathf.Abs(playerController.GetCurrentSpeed()) > 0)
         {
-            timer = timer % 1f;
+            if(!isPlayingFX == false)
+            {
+                timer = 0;
+                PlayRandomAudio();
+                isPlayingFX = true;
 
-            var audio = GetRandomClip();
-            audioSource.PlayOneShot(audio);
+            }
+            else
+            {
+                Debug.Log("Update footsteps");
+                timer += Time.deltaTime * speedModifier;
+                if (timer >= 0.75f)
+                {
+                    timer = timer % 0.75f;
+                    PlayRandomAudio();
+                }
+            }
         }
+        else
+        {
+            isPlayingFX = false;
+        }
+    }
+
+
+    protected void PlayRandomAudio()
+    {
+        var audio = GetRandomClip();
+        audioSource.PlayOneShot(audio);
     }
 
 

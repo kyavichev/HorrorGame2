@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.AI;
 
 
-public class PlayerController : MonoBehaviour, IHasSpeed
+public class PlayerController : MonoBehaviour
 {
     public float speed = 1;
     public float rotationSpeed = 1;

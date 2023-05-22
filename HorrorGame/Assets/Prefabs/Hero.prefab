@@ -560,6 +560,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 4437bc80104f4f84a9149c54a918b984, type: 3}
   audioSource: {fileID: 7230444095275988984}
   speedModifier: 1
+  playerController: {fileID: 7230444094998229678}
 --- !u!82 &7230444095275988984
 AudioSource:
   m_ObjectHideFlags: 0
