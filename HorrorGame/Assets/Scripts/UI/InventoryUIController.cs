@@ -26,12 +26,13 @@ public class InventoryUIController : MonoBehaviour
             {
                 InventoryCellView newCell = Instantiate<InventoryCellView>(cellPrefab);
                 newCell.transform.SetParent(gridParent.transform, false);
+                newCell.gridPosition = new Vector2Int(y, x);
 
                 cells.Add(newCell);
             }
         }
 
-        selectedCellPosition = new Vector2Int(0, 0);
+        selectedCellPosition = new Vector2Int(-1, -1);
     }
 
 
@@ -69,6 +70,13 @@ public class InventoryUIController : MonoBehaviour
                 cell.useAction = () =>
                 {
                     collectable.Use(collector);
+
+                    if(collectable is WeaponCollectable)
+                    {
+                        Debug.Log("KON :: selected");
+                        selectedCellPosition = cell.gridPosition;
+                        //selectedIndex = GridPositionToIndex(cell.gridPosition);
+                    }
                 };
 
                 if (loadoutController.leftHandItem == collectable || loadoutController.rightHandItem == collectable)
@@ -101,6 +109,11 @@ public class InventoryUIController : MonoBehaviour
 
     private int GridPositionToIndex(Vector2Int gridPosition)
     {
+        if(gridPosition.x == -1 && gridPosition.y == -1)
+        {
+            return -1;
+        }
+
         int i = gridPosition.x + gridPosition.y * size.x;
         return i;
     }

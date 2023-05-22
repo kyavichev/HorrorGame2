@@ -11,6 +11,9 @@ public class InventoryCellView : MonoBehaviour
     public GameObject selectedGameObject;
     public Button button;
 
+    [HideInInspector]
+    public Vector2Int gridPosition = new Vector2Int(-1, -1);
+
     public Action useAction;
 
 
