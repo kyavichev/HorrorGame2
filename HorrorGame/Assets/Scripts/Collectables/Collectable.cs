@@ -24,7 +24,7 @@ public class Collectable : MonoBehaviour
 
     private void OnTriggerEnter(Collider collision)
     {
-        Debug.Log("Collected with " + collision.gameObject.name);
+        Debug.Log("Triggered with " + collision.gameObject.name);
 
         Collector collector = collision.gameObject.GetComponent<Collector>();
         if(collector)
@@ -36,7 +36,7 @@ public class Collectable : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        Debug.Log("Collected with " + collision.gameObject.name);
+        Debug.Log("Collided with " + collision.gameObject.name);
 
         Collector collector = collision.collider.gameObject.GetComponent<Collector>();
         if (collector)

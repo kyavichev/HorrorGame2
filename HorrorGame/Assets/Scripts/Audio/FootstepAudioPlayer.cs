@@ -15,12 +15,6 @@ public class FootstepAudioPlayer : MonoBehaviour
     public PlayerController playerController;
 
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
     // Update is called once per frame
     void Update()
     {
@@ -35,7 +29,6 @@ public class FootstepAudioPlayer : MonoBehaviour
             }
             else
             {
-                Debug.Log("Update footsteps");
                 timer += Time.deltaTime * speedModifier;
                 if (timer >= 0.75f)
                 {
