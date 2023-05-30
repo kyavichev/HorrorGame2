@@ -78,3 +78,4 @@ crashlytics-build.properties
 */Temp
 */UserSettings/Layouts
 *.DS_Store
+*/.idea
