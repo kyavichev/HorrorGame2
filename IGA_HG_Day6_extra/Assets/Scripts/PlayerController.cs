@@ -30,6 +30,11 @@ public class PlayerController : MonoBehaviour
 
             moveDir = 0;
             hasMoved = true;
+
+            if (animator)
+            {
+                animator.SetFloat("speed", speed);
+            }
         }
 
         if(hasMoved == false)
