@@ -4,8 +4,20 @@ Game made for IGA Level 2
 
 * HorrorGame project contains full prototype
 * IGA_HG_Day2 state of the game after the second class
+  * Introduction to Unity
+  * Created Level1
+  * Added Terrain with Trees, Grass, Textures
+  * Dropped in a few scripts like Floater to show how to work with custom components
+  * Setup simple player controller
+  * Added a simple companion
 * IGA_HG_Day3 state of the game after the third class
+  * Added lots of scripts
+  * Setup a prefab spawner
+  * Setup an NPC
+  * Setup Game Canvas from a package with working Health Panel
 * IGA_HG_Day4 state of the game after the fourth class
+  * Added Main Menu scene
+  * Added Level2, basically clone of Level1
 * IGA_HG_Day5 state of the game after the fifth class
 * IGA_HG_Day6 state of the game after the sixth class
 * IGA_HG_Day6_extra has some improvements added
