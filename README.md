@@ -1,6 +1,6 @@
 # Horror Game
 
-Game made for IGA Level 2
+Game made for [IGA](https://indiegameacademy.com/) Level 2 Class.
 
 * HorrorGame project contains full prototype
 * IGA_HG_Day2 state of the game after the second class
@@ -34,4 +34,5 @@ Game made for IGA Level 2
   * Cleaned up Level1. It is made to demo Slenderman enemy.
   * Fixed Slenderman issues
   * Reworked Success panel that now allows user to advance to the next level.
+* IGA_HG_Final: Final version that has improvements that I added after the class was over.
 
